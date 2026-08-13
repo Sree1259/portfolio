@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import React, { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ParticleBackground } from '@/components/ui/ParticleBackground';
 import { TypewriterText } from '@/components/ui/TypewriterText';
@@ -18,16 +21,12 @@ import {
   getAdaptedProjects,
   getAdaptedSkills,
   getAdaptedExperience,
-  type RoleType,
 } from '@/lib/roles';
 
-interface PageProps {
-  searchParams: Promise<{ role?: string }>;
-}
-
-export default async function Page({ searchParams }: PageProps) {
-  const resolvedParams = await searchParams;
-  const activeRole = getActiveRole(resolvedParams.role);
+function PortfolioContent() {
+  const searchParams = useSearchParams();
+  const roleParam = searchParams.get('role');
+  const activeRole = getActiveRole(roleParam);
 
   // Adapt content dynamically
   const hero = getAdaptedHero(activeRole);
@@ -354,5 +353,17 @@ export default async function Page({ searchParams }: PageProps) {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={
+      <div className="bg-[#030712] text-zinc-100 min-h-screen flex items-center justify-center font-mono text-sm">
+        Loading Portfolio...
+      </div>
+    }>
+      <PortfolioContent />
+    </Suspense>
   );
 }
