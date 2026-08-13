@@ -10,4 +10,5 @@ export interface AboutData {
   image: { src: string; alt: string };
   stats: AboutStat[];
   currentlyWorkingOn: string;
+  personalInterests?: string[];
 }

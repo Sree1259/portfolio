@@ -49,6 +49,10 @@
   50%       { transform: translateY(-8px); }
 }
 
+html {
+  font-size: 20px; /* Globally increases the typography scale further */
+}
+
 :root {
   --background: #0a0f1e;
   --foreground: #ffffff;

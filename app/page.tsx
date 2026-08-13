@@ -139,6 +139,22 @@ export default async function Page({ searchParams }: PageProps) {
               </span>
               <span className="text-sm text-zinc-300">{aboutData.currentlyWorkingOn}</span>
             </div>
+
+            {aboutData.personalInterests && (
+              <div className="space-y-3 pt-2">
+                <h3 className="text-base font-semibold text-white tracking-wide">🌱 Personal Growth & Interests</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-zinc-400">
+                  {aboutData.personalInterests.map((interest, idx) => (
+                    <li
+                      key={idx}
+                      className="bg-white/[0.03] border border-white/5 p-3 rounded-lg flex items-start gap-2.5 hover:bg-white/5 hover:border-white/10 transition-all duration-200"
+                    >
+                      <span>{interest}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           {/* Quick Metrics */}

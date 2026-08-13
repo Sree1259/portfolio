@@ -17,9 +17,17 @@ export const aboutData: AboutData = {
   stats: [
     { label: 'Years of Experience', value: 3, suffix: '+' },
     { label: 'AI & Data Projects Shipped', value: 5, suffix: '+' },
-    { label: 'Data Pipelines Managed', value: 10, suffix: '+' },
+    { label: 'Data Pipelines Managed', value: 4, suffix: '+' },
   ],
   // BRANDING: Keep this updated — it signals momentum and gives returning visitors a reason to come back.
   currentlyWorkingOn:
     'Optimizing evaluation metrics and inference latency for the Contract Intelligence Agent.',
+  personalInterests: [
+    "📚 Currently Reading: Find the Path and Bhagavad Gita As It Is.",
+    "🎤 Growing as a Communicator: Actively participating in Toastmasters to improve public speaking, confidence, and leadership.",
+    "🌿 Nature: I enjoy exploring parks, short trips, and spending time outdoors—sunlight and nature help me recharge and think clearly.",
+    "💪 Well-being: I follow Mady Morrison workouts to stay active and maintain a healthy routine.",
+    "🍳 Cooking: I enjoy experimenting with new recipes and sharing meals with family and friends.",
+    "🎬 Movies: I enjoy adventure, thriller, and feel-good films, especially those with thoughtful details and storytelling that reward careful observation.",
+  ],
 };
