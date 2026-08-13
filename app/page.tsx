@@ -34,13 +34,6 @@ function PortfolioContent() {
   const skills = getAdaptedSkills(activeRole);
   const experience = getAdaptedExperience(activeRole);
 
-  const rolesList = [
-    { label: 'General / All', value: '' },
-    { label: 'AI Engineer', value: 'ai' },
-    { label: 'Data Engineer', value: 'data' },
-    { label: 'Software Engineer', value: 'software' },
-  ];
-
   return (
     <div className="bg-[#030712] text-zinc-100 min-h-screen font-sans selection:bg-[#06b6d4]/30 selection:text-[#06b6d4]">
       {/* Dynamic Header */}
@@ -62,26 +55,6 @@ function PortfolioContent() {
               </a>
             ))}
           </nav>
-
-          {/* Quick Role Switcher for Recruiters */}
-          <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 p-1 rounded-full text-xs">
-            {rolesList.map((r) => {
-              const isActive = (r.value === '' && !activeRole) || activeRole === r.value;
-              return (
-                <Link
-                  key={r.label}
-                  href={r.value ? `/?role=${r.value}` : '/'}
-                  className={`px-3 py-1 rounded-full transition-all duration-200 ${
-                    isActive
-                      ? 'bg-cyan-500 text-black font-semibold shadow-md shadow-cyan-500/20'
-                      : 'text-zinc-400 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  {r.label}
-                </Link>
-              );
-            })}
-          </div>
         </div>
       </header>
 
@@ -90,14 +63,6 @@ function PortfolioContent() {
         <ParticleBackground particleCount={50} className="opacity-40" />
         
         <div className="max-w-4xl mx-auto text-center md:text-left relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-950/20 text-cyan-400 font-mono text-xs">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-            </span>
-            Active Persona: {activeRole ? activeRole.toUpperCase() : 'BALANCED'}
-          </div>
-
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
             Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400">{hero.name}</span>
           </h1>
