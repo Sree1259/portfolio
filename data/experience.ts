@@ -7,7 +7,7 @@ export const experienceData: ExperienceData = {
       type: "work",
       company: "Agentic AI School",
       role: "Full Stack AI Engineer Intern",
-      dateRange: "Jan 2026 – Present",
+      dateRange: "Jan 2026 – Jul 2026",
       accentColor: "#06b6d4",
       roles: ["ai", "software"],
       achievements: [
@@ -33,7 +33,7 @@ export const experienceData: ExperienceData = {
       type: "work",
       company: "Citius Tech",
       role: "Data Analytics Engineer",
-      dateRange: "May 2025 – Jan 2026",
+      dateRange: "May 2024 – Present",
       accentColor: "#7c3aed",
       roles: ["data", "software"],
       achievements: [
@@ -63,7 +63,7 @@ export const experienceData: ExperienceData = {
       type: "work",
       company: "Accenture",
       role: "Adv App Engineering Associate",
-      dateRange: "Aug 2022 – July 2023",
+      dateRange: "Aug 2021 – Jul 2023",
       accentColor: "#10b981",
       roles: ["data", "software"],
       achievements: [

@@ -14,7 +14,7 @@ export const heroData: HeroData = {
     'I build production-grade AI systems with systems-level reliability — specializing in high-precision RAG pipelines, fine-tuned LLMs, and enterprise agents.',
   ctaButtons: {
     viewWork: { label: 'View My Work', href: '#projects' },
-    resume: { label: 'Download Resume', filename: 'Sreelekha_Vuppala_Resume.pdf' },
+    resume: { label: 'Download Resume', filename: 'Sreelekha_resume.pdf' },
   },
   socialLinks: {
     github: 'https://www.github.com/Sree1259',
